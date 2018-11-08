@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <MenuBar>
+               <menus>
+                  <Menu mnemonicParsing="false" text="ALUNO">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="CADASTRAR ALUNO" />
+                        <MenuItem mnemonicParsing="false" text="BUSCAR ALUNO" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="LIVROS">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="CADASTRAR LIVRO" />
+                        <MenuItem mnemonicParsing="false" text="BUSCAR LIVROS " />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="EMPRÉSTIMO ">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="EMPRESTAR LIVRO " />
+                        <MenuItem mnemonicParsing="false" text="BUSCAR LIVROS EMPRETADOS" />
+                        <MenuItem mnemonicParsing="false" text="CERTIFICADO DE QUITAÇÃO" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="RESERVA">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="FAZER RESERVA" />
+                        <MenuItem mnemonicParsing="false" text="BUSCAR LIVROS RESERVADOS" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="SAIR" />
+               </menus>
+            </MenuBar>
+            <Pane prefHeight="454.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" text="EMPRÉSTIMO DE LIVRO" />
+                  <TableView fx:id="grdEmpLivro" layoutX="13.0" layoutY="87.0" prefHeight="101.0" prefWidth="572.0">
+                     <columns>
+                        <TableColumn prefWidth="25.0" text="ID" />
+                        <TableColumn prefWidth="359.0" text="NOME DO LIVRO" />
+                        <TableColumn prefWidth="82.0" text="AUTOR" />
+                        <TableColumn prefWidth="101.0" text="ANO DE EDIÇÃO" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnBuscar" layoutX="521.0" layoutY="48.0" mnemonicParsing="false" text="BUSCAR " />
+                  <Label layoutX="19.0" layoutY="205.0" text="LIVRO SELECIONADO:" />
+                  <Label layoutX="19.0" layoutY="237.0" text="RA DO ALUNO" />
+                  <TextField fx:id="txtRaAluno" layoutX="141.0" layoutY="233.0" prefHeight="25.0" prefWidth="149.0" />
+                  <Label layoutX="19.0" layoutY="277.0" text="DATA DA RETIRADA" />
+                  <DatePicker fx:id="dateRetirada" layoutX="141.0" layoutY="273.0" prefHeight="25.0" prefWidth="149.0" />
+                  <Button fx:id="bntEfetuarEmp" layoutX="446.0" layoutY="324.0" mnemonicParsing="false" text="EFETUAR EMPRÉSTIMO" />
+                  <Button fx:id="btnCancelar" layoutX="351.0" layoutY="324.0" mnemonicParsing="false" text="CANCELAR " />
+                  <TextField fx:id="txtBuscarLivroEmp" layoutX="14.0" layoutY="48.0" prefHeight="25.0" prefWidth="490.0" promptText="Digite o nome do livro" />
+                  <Label layoutX="317.0" layoutY="277.0" text="DATA DA DEVOLUÇÃO" />
+                  <DatePicker fx:id="dateDevolução" layoutX="448.0" layoutY="273.0" prefHeight="25.0" prefWidth="136.0" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Pane prefHeight="454.0" prefWidth="600.0" />
+   </children>
+</VBox>
